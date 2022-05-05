@@ -1,3 +1,4 @@
+console.log("Happy Weather")
 let address = {
     api_key : "b8578d4c622040c9853e71f21c260f62",
     fetchLocation : function(){
@@ -6,7 +7,7 @@ let address = {
         fetch(url)
         .then((response)=>response.json())
         .then((data)=>{
-            console.log(data);
+            // console.log(data);
             let {city} = data
             let {country} = data
             if (city)
@@ -53,15 +54,18 @@ let weather = {
     },
     search : function(){
         let input = document.getElementById('input').value;
-        if(input.search(/[^a-z]/i)!=-1 || input.length>20 || input.length==0)
-        {
+        const r = /\B\s+|\s+\B/g
+        input=input.replace(r,'')
+        if(input.search(/[^a-z\s]/i)!=-1 || input.length>20 || input.length==0)
+        {   
             document.getElementById('input').value=""
             document.querySelector('input').placeholder='You made a typo !!!'
         }
         else 
         {
-        this.fetchWeather(input)
-        document.getElementById('input').value=""
+            
+            this.fetchWeather(input)
+            document.getElementById('input').value=""
         }
     }
 }
