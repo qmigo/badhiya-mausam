@@ -1,6 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=BIZ+UDPMincho&family=Ubuntu&display=swap');
+
 *{
     margin: 0;
     padding: 0;
+    font-family: 'Ubuntu', sans-serif;
 }
 body{
     background: url('back.jpg') center center no-repeat ;
@@ -38,17 +41,18 @@ body{
 .details p{
     margin-bottom: 0px;
     margin: 4px;
+    cursor: default;
 }
 .details img{
     object-fit: contain;
     width: 50px;
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.492);
     border-radius: 50%;
+}
+.details img:hover{
     box-shadow: 0px 0px 3px 1px black;
 }
-.hidden{
-    visibility: none;
-}
+
 .search:focus{
     outline: none;
 }
