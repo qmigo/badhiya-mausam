@@ -80,4 +80,5 @@ document.querySelector('#input').addEventListener('keyup',(e)=>{
     weather.search()
 })
 
+// call for fetch location
 address.fetchLocation()

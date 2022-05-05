@@ -17,6 +17,10 @@ body{
     width: 300px;
     height: fit-content;
     background-color: rgba(0, 0, 0, 0.565);
+    box-shadow: 0px 0px 4px 1px black;
+}
+.card:hover{
+    box-shadow: 0px 0px 3px 2px black;
 }
 #input{ 
     padding: 4px 2px;
@@ -40,6 +44,7 @@ body{
     width: 50px;
     background-color: white;
     border-radius: 50%;
+    box-shadow: 0px 0px 3px 1px black;
 }
 .hidden{
     visibility: none;
