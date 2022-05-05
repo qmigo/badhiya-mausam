@@ -2,7 +2,7 @@ let address = {
     api_key : "b8578d4c622040c9853e71f21c260f62",
     fetchLocation : function(){
         document.querySelector('input').placeholder='Locating your city ...'
-        let url =`https://ipgeolocation.abstractapi.com/v1/?api_key=b8578d4c622040c9853e71f21c260f62`
+        let url =`https://ipgeolocation.abstractapi.com/v1/?api_key=${this.api_key}`
         fetch(url)
         .then((response)=>response.json())
         .then((data)=>{
