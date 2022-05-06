@@ -54,8 +54,17 @@ let weather = {
     },
     search : function(){
         let input = document.getElementById('input').value;
-        const r = /\B\s+|\s+\B/g
-        input=input.replace(r,'')
+        let correctInput=input.split(/\s+/)
+        let searchString = ""
+        for(blocks of correctInput)
+        {
+            if(blocks!="")
+            searchString+=blocks+" ";
+
+        }
+        // console.log(searchString);
+        
+        input=searchString
         if(input.search(/[^a-z\s]/i)!=-1 || input.length>20 || input.length==0)
         {   
             document.getElementById('input').value=""
