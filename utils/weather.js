@@ -43,7 +43,7 @@ let weather = {
 
         document.querySelector('.details').innerHTML=`
         <p>Name : ${name}</p>
-        <p>Temp : ${temp} &deg C;</p>
+        <p>Temp : ${temp} &deg C</p>
         <img id="icon" src="https://openweathermap.org/img/wn/${icon}.png"></img>
         <p>Wind Speed : ${speed} m/s</p>
         <p>Description : ${description}</p>
